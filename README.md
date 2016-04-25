@@ -1,7 +1,6 @@
-CyanPOP-TOOLS (WIP)
+CyanPOP-TOOLS 
 ====================================
 
-### How to use? ###
 ```bash
-    $ . cyanpop.sh
+    $ . CyanPOP-Tools/build.sh <device>
 ```
