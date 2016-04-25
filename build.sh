@@ -44,7 +44,7 @@ tput setaf 3
 	sleep 3
 tput setaf 2
 	logfile="$device-$(date +%Y%m%d).log"
-	lunch cm_$device-userdebug && time mka bacon 2>&1 | tee $logfile
+	breakfast $device && time mka bacon 2>&1 | tee $logfile
 	if [ $? -eq 0 ]; then
 	printf "Build Suceeded, grab your zip at $(ls ${OUT}/R*.zip)\nBuild log is at ${logfile} incase you need it\n";
 	else
