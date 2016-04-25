@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Script based on ResurrectionRemix
+
 normal='tput sgr0'              # White
 red='tput setaf 1'              # Red
 green='tput setaf 2'            # Green
