@@ -37,6 +37,7 @@ tput setaf 3
 	sleep 4
 tput setaf 2
 	source build/envsetup.sh
+        make clean && make clobber
 tput setaf 3
 	echo  
 	if [ ! $1 ];
