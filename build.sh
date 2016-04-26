@@ -21,22 +21,22 @@ bldwht=${txtbld}$(tput setaf 7) # Bold White
 clear
         echo -e "${bldcya}           Building Cyanpop ROM!        "
 tput setaf 3
-    sleep 1
-    echo
-    echo Repo Sync the sources...
-    echo
+        sleep 1
+        echo
+        echo Repo Sync the sources...
+        echo
 	sleep 2
 tput setaf 2
-repo init -u git://github.com/CyanPop/platform_manifest.git -b cm-13.0
-repo sync -j5 --force-sync -f
+        repo init -u git://github.com/CyanPop/platform_manifest.git -b cm-13.0
+        repo sync -j5 --force-sync -f
 tput setaf 3
-    sleep 3
-    echo
-    echo Setting up Build Environment...
-    echo
+        sleep 3
+        echo
+        echo Setting up Build Environment...
+        echo
 	sleep 4
 tput setaf 2
-	source build/envsetup.sh
+        source build/envsetup.sh
         make clean && make clobber
 tput setaf 3
 	echo  
