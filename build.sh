@@ -23,9 +23,18 @@ clear
 tput setaf 3
     sleep 1
     echo
-    echo Setting up Build Environment...
+    echo Repo Sync the sources...
     echo
 	sleep 2
+tput setaf 2
+repo init -u git://github.com/CyanPop/platform_manifest.git -b cm-13.0
+repo sync -j5 --force-sync -f
+tput setaf 3
+    sleep 3
+    echo
+    echo Setting up Build Environment...
+    echo
+	sleep 4
 tput setaf 2
 	source build/envsetup.sh
 tput setaf 3
@@ -43,7 +52,7 @@ tput setaf 3
 	echo  
 	echo -e "${bldvlt}Building Cyanpop now!"
 	echo  
-	sleep 3
+	sleep 5
 tput setaf 2
 	logfile="$device-$(date +%Y%m%d).log"
 	breakfast $device && time mka bacon 2>&1 | tee $logfile
