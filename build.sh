@@ -58,7 +58,7 @@ tput setaf 2
 	logfile="$device-$(date +%Y%m%d).log"
 	breakfast $device && time mka bacon 2>&1 | tee $logfile
 	if [ $? -eq 0 ]; then
-	printf "Build Suceeded, grab your zip at $(ls ${OUT}/R*.zip)\nBuild log is at ${logfile} incase you need it\n";
+	printf "Build Suceeded, grab your zip at $(ls ${OUT}/cyanpop_*.zip)\nBuild log is at ${logfile} incase you need it\n";
 	else
 	printf "Build failed, check the log at ${logfile}\n";
 	exit 1;
